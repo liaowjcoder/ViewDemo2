@@ -13,4 +13,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher" />
+
+    <com.example.zeal.scrollerdemo.MyView
+        android:id="@+id/MyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
+
+    <com.example.zeal.scrollerdemo.ScrollerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
+
+    <com.example.zeal.scrollerdemo.MyView2
+        android:layout_width="200dp"
+        android:layout_height="200dp"  android:background="#00f"
+        android:orientation="vertical">
+
+        <com.example.zeal.scrollerdemo.MyTextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:text="textview" />
+    </com.example.zeal.scrollerdemo.MyView2>
+
 </LinearLayout>
