@@ -1,1 +1,1 @@
-include ':app', ':scrollerdemo', ':smartdorefreshlayout'
+include ':app', ':scrollerdemo', ':smartdorefreshlayout', ':photoviewdmeo'
