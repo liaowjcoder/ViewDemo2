@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent">-->
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,20 +11,63 @@
         android:orientation="vertical"
         tools:context="com.example.zeal.viewdemo.MainActivity">
 
-        <!--    <com.example.zeal.viewdemo.MyLinearLayout
+        <com.example.zeal.viewdemo.MyLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<com.example.zeal.viewdemo.MyTextView
                 android:layout_width="wrap_content"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:layout_height="30px"
+                android:background="@color/colorPrimary"
+                android:text="aaaa" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aaaaaaaaaaa" />
 
-                <com.example.zeal.viewdemo.MyTextView
-                    android:layout_width="wrap_content"
-                    android:text="aaaa"
-                    android:background="@color/colorPrimary"
-                    android:layout_height="30px" />
-            </com.example.zeal.viewdemo.MyLinearLayout>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aaaaaaaaaaa" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aaaaaaaaaaa" />
+        </com.example.zeal.viewdemo.MyLinearLayout>
+
+
+
+       <!-- <com.example.zeal.viewdemo.MyLinearLayout
+            android:layout_width="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">-->
+
+            <!--<com.example.zeal.viewdemo.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="30px"
+                android:background="@color/colorPrimary"
+                android:text="aaaa" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bbbbb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bbbbb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bbbbb" />
+        <!--</com.example.zeal.viewdemo.MyLinearLayout>
+-->
         <!--自定义View-->
-        <com.example.zeal.viewdemo.demo.CircleView
+        <!--<com.example.zeal.viewdemo.demo.CircleView
             android:layout_width="160dp"
             android:layout_height="80dp"
             android:background="@color/colorPrimary" />
@@ -40,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:background="@color/colorAccent"></View>
-        <!--margin-->
+        &lt;!&ndash;margin&ndash;&gt;
         <com.example.zeal.viewdemo.demo.CircleView
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -50,7 +93,7 @@
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:background="@color/colorAccent"></View>
-        <!--padding-->
+        &lt;!&ndash;padding&ndash;&gt;
         <com.example.zeal.viewdemo.demo.CircleView
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -62,7 +105,7 @@
             android:textColor="#fff"
             android:text="android:padding=20dp"
             android:background="@color/colorAccent"></TextView>
-        <!--padding+wrap_content-->
+        &lt;!&ndash;padding+wrap_content&ndash;&gt;
         <com.example.zeal.viewdemo.demo.CircleView2
             android:layout_width="100dp"
             android:layout_height="150dp"
@@ -75,11 +118,12 @@
             android:textColor="#fff"
             android:text="android:layout_width=wrap_content"
             android:background="@color/colorAccent"></TextView>
-        <!--padding+wrap_content-->
+        &lt;!&ndash;padding+wrap_content&ndash;&gt;
         <com.example.zeal.viewdemo.demo.CircleView2
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:padding="20dp"
-            android:background="@color/colorPrimary" />
+            android:background="@color/colorPrimary" />-->
     </LinearLayout>
-</ScrollView>
+<!--
+</ScrollView>-->
