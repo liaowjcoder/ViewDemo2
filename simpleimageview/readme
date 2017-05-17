@@ -1,0 +1,68 @@
+
+自定义 View
+
+    第一版需求：
+
+        指定一个图片，然后根据图片的大小显示这个 View 。
+
+    第二版需求：
+
+        指定一个图片，若是该 View 为 EXACTLY 则指定为具体的值，若是该
+        View 为 AT_MOST/UNSPECEPT 的话就指定为该图片的大小。
+
+
+SimpleImageView 学习到的一些知识点：
+
+        获取 Drawble 的宽高：
+
+            mWidth = drawable.getIntrinsicWidth();
+            mHeight = drawable.getIntrinsicHeight();
+
+
+        Drawable 转化为 Bitmap
+
+            public static Bitmap drawableToBitmap(Drawable drawable) {
+
+                    Bitmap bitmap = Bitmap.createBitmap(
+
+                            drawable.getIntrinsicWidth(),
+
+                            drawable.getIntrinsicHeight(),
+
+                            drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888
+
+                                    : Bitmap.Config.RGB_565);//Config 配置
+
+                    //需要将绘制出来，不然会是黑乎乎的一片。
+                    Canvas canvas = new Canvas(bitmap);
+
+                    drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+
+                    drawable.draw(canvas);
+
+                    return bitmap;
+                }
+
+        自定义属性：
+
+            <attr name="src" format="integer"></attr>
+
+            这种方式可以指定 Drawable 类型，通过
+
+            mDrawable = typedArray.getDrawable(R.styleable.SimpleImageView_src);
+
+            可以获取到该 src id 对应的 Drawable 对象。
+
+        使用画布绘制一个 Bitmap
+
+            canvas.drawBitmap(bitmap, getLeft(), getTop(), mPaint);
+
+            参数2，3表示的是在该画布指定的左上角位置绘制该 bitmap。
+
+        缩放一个 Bitmap
+
+            Bitmap bitmap = Bitmap.createScaledBitmap(ImageUtils.drawableToBitmap(mDrawable),
+                getMeasuredWidth(), getMeasuredHeight(), true);
+
+            获取一个新的 Bitmap 对象，这个新的对象的大小是由第 2，3 参数指定。
+            当新设置的宽高和原始的宽高是一致时就不会创建一个新的 Bitmap 对象。
